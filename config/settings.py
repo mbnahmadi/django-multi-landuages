@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,13 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #core app
-    'django.apps.CoreConfig',
+    #install core app
+    'core.apps.CoreConfig',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware', #فعال کردن تشخیص زبان
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -105,12 +107,26 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
+
+#پشتیبانی از زبان ها
+LANGUAGES = [
+    ('en', _('English')),
+    ('fa', _('فارسی')),
+]
+
+#مسیر فایل های ترجمه
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
+
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
+# تنظیمات بین‌المللی‌سازی
 USE_I18N = True
-
+USE_L10N = True
 USE_TZ = True
 
 
