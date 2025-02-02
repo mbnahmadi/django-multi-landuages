@@ -107,11 +107,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
+LANGUAGE_CODE = 'fa-ir'
 
 #پشتیبانی از زبان ها
 LANGUAGES = [
-    ('en', _('English')),
     ('fa', _('فارسی')),
+    ('en', _('English')),
 ]
 
 #مسیر فایل های ترجمه
@@ -119,8 +120,6 @@ LOCALE_PATHS = [
     BASE_DIR / 'locale',
 ]
 
-
-LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 

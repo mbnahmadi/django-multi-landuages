@@ -1,0 +1,19 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Welcome to our store" %}</title>
+</head>
+<body>
+    <h1>{% trans "Welcome to our store" %}</h1>
+    <p>{% trans "choose your landuages" %}</p>
+
+    <a href="{% url 'set_language' 'en' %}">US English</a>|
+    <a href="{% url 'set_language' 'fa' %}">IR فارسی</a>|
+    <a href="{% url 'set_language' 'fr' %}">FR French</a>
+
+</body>
+</html>
