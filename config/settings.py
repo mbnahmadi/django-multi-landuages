@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.locale.LocaleMiddleware', #فعال کردن تشخیص زبان
+    # 'django.middleware.locale.LocaleMiddleware', #فعال کردن تشخیص زبان
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -108,16 +108,17 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
 LANGUAGE_CODE = 'fa-ir'
-
+# LANGUAGE_CODE = 'en-us'
 #پشتیبانی از زبان ها
 LANGUAGES = [
-    ('fa', _('فارسی')),
-    ('en', _('English')),
+    ('fa', 'Persian'),
+    ('en', 'English'),
 ]
+
 
 #مسیر فایل های ترجمه
 LOCALE_PATHS = [
-    BASE_DIR / 'locale',
+    BASE_DIR / 'locale'
 ]
 
 
