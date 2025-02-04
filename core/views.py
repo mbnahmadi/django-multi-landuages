@@ -10,3 +10,7 @@ def home(request):
     }
     return render(request, 'core/index.html', context)
 
+
+def user_setting(request):
+    return render(request, "core/user_settings.html")
+
