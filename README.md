@@ -1,6 +1,6 @@
 # django-multi-landuages
 
-There are two ways to make a site multilingual: 
+There are two ways to make a site multilanguage: 
 
 ## First Way
 Change the site language based on the browser's default language
